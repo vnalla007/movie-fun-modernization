@@ -19,3 +19,20 @@ albums:
   url: //album-service/albums
 movies:
   url: //movie-service/movies
+
+resilience4j:
+  bulkhead:
+    configs:
+      default:
+        maxConcurrentCalls: 5
+        maxWaitDuration: 0
+
+# To expose actuator endpoints - NOT FOR PRODUCTION USE
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

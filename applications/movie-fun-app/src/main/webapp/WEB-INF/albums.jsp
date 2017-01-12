@@ -74,6 +74,7 @@
                 <td> ${album.title} </td>
                 <td> ${album.artist} </td>
                 <td> ${album.year} </td>
+                <td> <img src="/albums/${album.id}/thumbnail" width="50" height="50"> </td>
                 <td><a href="/albums/${album.id}">Details</a></td>
             </tr>
         </c:forEach>
